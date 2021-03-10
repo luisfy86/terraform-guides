@@ -25,13 +25,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: hashicorp/setup-terraform@v1
-    
-    - name: check dir
-      run: ls -la
 
     - name: Terraform fmt
       id: fmt
-      run: terraform fmt -check
+      run: ls -la && terraform fmt -check
       continue-on-error: true
 
     - name: Terraform Init
