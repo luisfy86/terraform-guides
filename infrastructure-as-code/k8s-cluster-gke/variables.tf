@@ -10,6 +10,7 @@ variable "gcp_zone" {
 
 variable "gcp_project" {
   description = "GCP project name"
+  default = "tst-gen-01"
 }
 
 variable "initial_node_count" {
@@ -44,8 +45,10 @@ variable "environment" {
 
 variable "vault_user" {
   description = "Vault userid: determines location of secrets and affects path of k8s auth backend"
+  default = "vault"
 }
 
 variable "vault_addr" {
   description = "Address of Vault server including port"
+  default = "https://vault.com:8080"
 }
