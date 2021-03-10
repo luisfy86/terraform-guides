@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     defaults:
       run:
-        working-directory: ${{ env.tf_actions_working_dir }}
+        working-directory: "infraestructure-as-code/gcp-compute-instance"
     steps:
     - uses: actions/checkout@v2
     - uses: hashicorp/setup-terraform@v1
