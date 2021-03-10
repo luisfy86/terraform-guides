@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./infrastructure-as-code/k8s-cluster-gke
+        working-directory: ./infrastructure-as-code/aws-ec2-instance
     steps:
     - uses: actions/checkout@v2
     - uses: hashicorp/setup-terraform@v1
