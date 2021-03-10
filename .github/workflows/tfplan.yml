@@ -26,7 +26,7 @@ jobs:
     - name: Terraform fmt
       id: fmt
       run: terraform fmt -check
-      working-directory: "infraestructure-as-code/gcp-compute-instance"
+      working-directory: ./infraestructure-as-code/gcp-compute-instance
       continue-on-error: true
 
     - name: Terraform Init
@@ -35,10 +35,10 @@ jobs:
 
     - name: Terraform Validate
       id: validate
-      working-directory: "infraestructure-as-code/gcp-compute-instance"
+      working-directory: ./infraestructure-as-code/gcp-compute-instance
       run: terraform validate -no-color
 
     - name: Terraform Plan
       id: plan
-      working-directory: "infraestructure-as-code/gcp-compute-instance"
+      working-directory: ./infraestructure-as-code/gcp-compute-instance
       run: terraform plan -no-color
